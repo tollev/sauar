@@ -1,34 +1,25 @@
+/* App.css */
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  /* keep mobile-friendly padding; we'll disable it on desktop */
+  padding: 2rem;
+  max-width: 1280px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 1024px) {
+  #root {
+    max-width: none;   /* allow full-width layout on desktop */
+    padding: 0;        /* let Tailwind control spacing */
+    text-align: initial; /* don't globally center everything on desktop */
   }
 }
 
+/* (rest unchanged) */
+.logo { height: 6em; padding: 1.5em; }
+@keyframes logo-spin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  a:nth-of-type(2) .logo { animation: logo-spin infinite 20s linear; }
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+.card { padding: 2em; }
+.read-the-docs { color: #888; }
