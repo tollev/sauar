@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'gill-sans-nova', 'Gill Sans', 'Gill Sans MT', sans-serif;
+  background-color: #FCF5E2;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #166534;
+  font-weight: 300;
+}
+
+a {
+  color: #166534;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
