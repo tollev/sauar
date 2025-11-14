@@ -14,7 +14,7 @@ export function Hero() {
         <div className="hero-content">
           <h2 className="hero-title">Velkommen til Sauar Gard</h2>
           <p className="hero-subtitle">
-            Håndpresset eplemost og bærjuicer siden 2003
+            Håndpresset eplemost og bærjuicer <br/> siden 2003
           </p>
         </div>
       </div>

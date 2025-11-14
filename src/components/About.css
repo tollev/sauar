@@ -22,7 +22,7 @@
 .about-text {
   background-color: white;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  padding: 2rem 3rem;
+  padding: 2rem 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -101,12 +101,12 @@
     width: 41.666667%; /* 5/12 */
     padding: 2rem 3rem;
     padding-top: 6rem;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
   }
   
   .about-image {
     width: 33.333333%; /* 4/12 */
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
   }
   
   .about-card-reverse .about-text {
