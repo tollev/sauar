@@ -1,19 +1,16 @@
 .about {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 4rem 1rem;
 }
 
 .about-container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
 }
 
 .about-card {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   align-items: stretch;
   justify-content: center;
 }
@@ -24,18 +21,15 @@
 
 .about-text {
   background-color: white;
-  border-radius: 0.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
-  padding-top: 6rem;
 }
 
 .about-image {
-  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   background-color: white;
@@ -83,10 +77,20 @@
   margin-bottom: 0.5rem;
 }
 
-/* Desktop styles */
+
 @media (min-width: 768px) {
+
+.about {
+  padding: 4rem 0rem;
+  }
+
+  .about-container {
+    gap: 3rem;
+  }
+
   .about-card {
     flex-direction: row;
+    gap: 1.5rem;
   }
   
   .about-card-reverse {
@@ -95,10 +99,14 @@
   
   .about-text {
     width: 41.666667%; /* 5/12 */
+    padding: 2rem 3rem;
+    padding-top: 6rem;
+    border-radius: 0.5rem;
   }
   
   .about-image {
     width: 33.333333%; /* 4/12 */
+    border-radius: 0.5rem;
   }
   
   .about-card-reverse .about-text {

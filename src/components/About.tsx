@@ -13,7 +13,7 @@ export function About() {
             <h2 className="about-title">Om Sauar Gard</h2>
             <div className="about-content">
               <p>
-                På Sauar gard har vi presset eplemost og bærjuicer siden 2003. Sauar Gard er vårt eksklusive varemerke som har kvalitet og smak som matcher kresne restaurant-ganer.<br /><br />Det er firmaet Epleblomsten som er lokalisert her, og som står for produksjonen. Ønsker du mer informasjon om Epleblomsten? <a href="https://epleblomsten.no" target="_blank" rel="noopener noreferrer">Klikk her</a>
+                På Sauar gard har vi presset eplemost og bærjuicer siden 2003. Sauar Gard er vårt eksklusive varemerke som har kvalitet og smak som matcher kresne restaurant-ganer.<br /><br />Det er firmaet Epleblomsten som er lokalisert her, og som står for produksjonen. Ønsker du mer informasjon om Epleblomsten? <br/> <a href="https://epleblomsten.no" target="_blank" rel="noopener noreferrer"><u>Klikk her</u></a>
               </p>
             </div>
           </div>
