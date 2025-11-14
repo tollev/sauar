@@ -38,8 +38,8 @@ export function About() {
           <div className="about-text">
             <h3 className="contact-title">Kontakt oss</h3>
             <ul className="contact-list">
-              <li>• Telefon: <a href="tel:+4740222210">+47 40 22 22 10</a></li>
-              <li>• E-post: <a href="mailto:post@epleblomsten.no">post@epleblomsten.no</a></li>
+              <li>Telefon: <a href="tel:+4740222210">+47 40 22 22 10</a></li>
+              <li>E-post: <a href="mailto:post@epleblomsten.no">post@epleblomsten.no</a></li>
             </ul>
           </div>
         </div>
