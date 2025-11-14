@@ -1,7 +1,5 @@
-import Gardsbilde from '../assets/Gardsbilde.jpg'
 import Eplehagen from '../assets/Eplehagen.png'
 import Flasker from '../assets/Flasker.jpg'
-import Gardstunet from '../assets/Gårdstunet.png'
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import './About.css';
 
