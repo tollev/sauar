@@ -1,5 +1,5 @@
 import Flasker from '../assets/Flasker.jpg'
-import Gardstunet from '../assets/Gardstunet.jpg'
+import Gardstunet from '../assets/Gardstunet.png'
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import './About.css';
 
