@@ -1,4 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+:root {
+  /* Brand colors, taken from the apple logo */
+  --green: #24513a;
+  --green-dark: #173826;
+  --green-light: #e6eee3;
+  --red: #c73927;
+  --red-dark: #a52d1e;
+  --cream: #fcf5e2;
+  --text: #2f2f2a;
+  --text-muted: #55564d;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  /* Gill Sans where installed, Lato (web font) everywhere else */
+  --font-sans: 'Gill Sans', 'Gill Sans MT', 'Lato', system-ui, sans-serif;
+
+  --container: 1200px;
+  --gutter: 1rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 2rem;
+  }
+}
 
 * {
   margin: 0;
@@ -7,23 +30,65 @@
 }
 
 body {
-  font-family: 'gill-sans-nova', 'Gill Sans', 'Gill Sans MT', sans-serif;
-  background-color: #FCF5E2;
-  color: #333;
+  font-family: var(--font-sans);
+  background-color: var(--cream);
+  color: var(--text);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  color: #166534;
-  font-weight: 300;
+  font-family: var(--font-serif);
+  color: var(--green);
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 a {
-  color: #166534;
+  color: var(--green);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Short red rule under section headings */
+.heading-rule::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: 1rem;
+  background-color: var(--red);
+  border-radius: 2px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: var(--red);
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.text-link:hover {
+  color: var(--red-dark);
+  border-bottom-color: currentColor;
+  text-decoration: none;
+}
+
+.text-link span {
+  transition: transform 0.2s;
+}
+
+.text-link:hover span {
+  transform: translateX(3px);
 }

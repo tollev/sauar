@@ -1,45 +1,56 @@
 .hero {
   position: relative;
-  height: 400px;
+  height: 75vh;
+  min-height: 480px;
+  max-height: 820px;
   overflow: hidden;
+  background-color: var(--green-dark);
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 55%;
 }
 
+/* Darker at top (header) and bottom, lighter in the middle so the photo shows */
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(1, 97, 78, 0.85);
+  background:
+    radial-gradient(ellipse at center, rgba(23, 56, 38, 0.6) 0%, rgba(23, 56, 38, 0.2) 65%),
+    linear-gradient(
+      to bottom,
+      rgba(23, 56, 38, 0.6) 0%,
+      rgba(23, 56, 38, 0.1) 30%,
+      rgba(23, 56, 38, 0.1) 60%,
+      rgba(23, 56, 38, 0.65) 100%
+    );
 }
 
 .hero-content {
   text-align: center;
-  padding: 0 1rem;
-  color: #ffffff;
+  padding: 0 var(--gutter);
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
 }
 
 .hero-title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   font-size: 2.5rem;
-  font-weight: 300;
-  color: #fffffe;
+  color: #fff;
 }
 
 .hero-subtitle {
   max-width: 48rem;
   margin: 0 auto;
-  font-size: 1.2rem;
-  font-weight: 250;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 /* Animations */
@@ -64,22 +75,20 @@
   opacity: 0;
 }
 
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 4rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 2rem;
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-in-delayed {
+    animation: none;
+    opacity: 1;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
-  
+
   .hero-subtitle {
-    font-size: 1.7rem;
+    font-size: 1.75rem;
   }
 }

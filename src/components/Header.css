@@ -1,35 +1,47 @@
+/* Transparent header that sits on top of the hero image */
 .header {
-  background-color: #FCF5E2;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  padding: 1.5rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 1.25rem 0;
 }
 
 .header-container {
-  max-width: 1280px;
+  max-width: var(--container);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--gutter);
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.6rem;
 }
 
 .header-logo {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 2.5rem;
+  height: auto;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
 
 .header-title {
-  font-size: 1rem;
-  font-weight: 300;
-  color: #166534;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
 }
 
- @media (min-width: 768px) {
+@media (min-width: 768px) {
   .header {
-    background-color: #FCF5E2;
-
+    padding: 1.75rem 0;
   }
-} 
+
+  .header-logo {
+    width: 3rem;
+  }
+
+  .header-title {
+    font-size: 1.75rem;
+  }
+}

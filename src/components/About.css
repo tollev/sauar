@@ -1,136 +1,80 @@
 .about {
-  max-width: 1280px;
-  margin: 0 auto;
+  padding: 4rem var(--gutter);
 }
 
 .about-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.about-card {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-}
-
-.about-card-reverse {
-  flex-direction: column-reverse;
-}
-
-.about-text {
-  background-color: white;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  padding: 2rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
-}
-
-.about-image {
-  overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  display: flex;
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  gap: 2.5rem;
   align-items: center;
-  justify-content: center;
-}
-
-.image {
-  width: 100%;
-  height: auto;
 }
 
 .about-title {
-  margin-bottom: 1.5rem;
-  color: #166534;
-  font-size: 2rem;
+  margin-bottom: 1.75rem;
+  font-size: 2.25rem;
 }
 
 .about-content {
-  color: #525252;
+  max-width: 34rem;
+  color: var(--text-muted);
 }
 
 .about-content p {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.75;
+  margin-bottom: 1.25rem;
 }
 
-.contact-title {
-  margin-bottom: 1rem;
-  color: #166534;
-  font-size: 1.5rem;
-}
-
-.contact-list {
-  list-style: none;
-  padding: 0;
-  color: #525252;
+.about-content .text-link {
   font-size: 1.125rem;
-  font-weight: 300;
 }
 
-.contact-list li {
-  margin-bottom: 0.5rem;
+.about-image {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 32px -12px rgba(23, 56, 38, 0.35);
 }
 
+/* Crop away the street behind the bottles and focus on the labels */
+.image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 65%;
+}
+
+.photo-band {
+  height: 50vh;
+  min-height: 280px;
+  max-height: 560px;
+  overflow: hidden;
+}
+
+.photo-band-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+}
 
 @media (min-width: 768px) {
-
-.about {
-  padding: 4rem 0rem;
+  .about {
+    padding: 7rem var(--gutter);
   }
 
   .about-container {
-    gap: 3rem;
+    grid-template-columns: 7fr 5fr;
+    gap: 5rem;
   }
 
-  .about-card {
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-  
-  .about-card-reverse {
-    flex-direction: row;
-  }
-  
-  .about-text {
-    width: 41.666667%; /* 5/12 */
-    padding: 2rem 3rem;
-    padding-top: 6rem;
-    border-radius: 0.2rem;
-  }
-  
-  .about-image {
-    width: 33.333333%; /* 4/12 */
-    border-radius: 0.2rem;
-  }
-  
-  .about-card-reverse .about-text {
-    width: 33.333333%; /* 4/12 */
-  }
-  
-  .about-card-reverse .about-image {
-    width: 41.666667%; /* 5/12 */
-  }
-  
   .about-title {
-    font-size: 2.5rem;
-    padding-top: 4rem;
+    font-size: 3rem;
   }
-  
-  .about-content p {
-    font-size: 1.3rem;
-  }
-  
-  .contact-title {
-    font-size: 1.875rem;
-  }
-  
-  .contact-list {
-    font-size: 1.3rem;
+
+  .about-content p,
+  .about-content .text-link {
+    font-size: 1.25rem;
   }
 }

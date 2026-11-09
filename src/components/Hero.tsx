@@ -1,5 +1,5 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import heroImage from "../assets/Epler.png"
+import heroImage from "../assets/Eplehagen.jpg"
 import './Hero.css';
 
 export function Hero() {
@@ -9,6 +9,7 @@ export function Hero() {
         src={heroImage}
         alt="Apple orchard at Sauar Gard"
         className="hero-image"
+        fetchPriority="high"
       />
       <div className="hero-overlay">
         <div className="hero-content">
